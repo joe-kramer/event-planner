@@ -6,6 +6,6 @@ public class Event {
   }
 
   public int getPeople() {
-    return 0;
+    return mPeople;
   }
 }
