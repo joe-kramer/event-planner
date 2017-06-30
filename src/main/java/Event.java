@@ -53,4 +53,13 @@ public class Event {
   public boolean checkPeopleCoupon() {
     return mPeople > 150;
   }
+
+  public int peopleCouponTotal(int current) {
+    if (mBand == true) {
+      return (current - 250);
+    } else {
+      mBand = true;
+      return current;
+    }
+  }
 }
