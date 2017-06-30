@@ -1,7 +1,11 @@
 public class Event {
-  // private int mPeople;
+  private int mPeople;
 
-  // public Event(int people) {
-  //   mPeople = people;
-  // }
+  public Event(int people) {
+    mPeople = people;
+  }
+
+  public int getPeople() {
+    return 0;
+  }
 }
