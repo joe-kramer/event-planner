@@ -27,5 +27,6 @@ public class App {
     }
     System.out.print("\033[H\033[2J");
     Event userEvent = new Event(people, food, beverages, band);
+    userEvent.setPrice();
   }
 }

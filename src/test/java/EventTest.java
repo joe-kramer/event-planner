@@ -34,9 +34,10 @@ public class EventTest {
   }
 
   @Test
-  public void getPrice_returnsPrice_100() {
+  public void setPrice_returnsPrice_490() {
     Event testEvent = new Event(10, "Chicken", "Alcohol", true);
-    assertEquals(490, testEvent.getPrice());
+    testEvent.setPrice();
+    assertEquals("490.00", testEvent.getTotal());
   }
 
   @Test
@@ -48,23 +49,24 @@ public class EventTest {
   @Test
   public void peopleCouponTotal_ifBandSelected_240() {
     Event testEvent = new Event(10, "Chicken", "Alcohol", true);
-    int total = testEvent.getPrice();
-    assertEquals(240, testEvent.peopleCouponTotal(total));
+    testEvent.setPrice();
+    testEvent.peopleCouponTotal();
+    assertEquals("240.00", testEvent.getTotal());
   }
 
   @Test
   public void peopleCouponTotal_ifBandNotSelected_240() {
     Event testEvent = new Event(10, "Chicken", "Alcohol", false);
-    int total = testEvent.getPrice();
-    assertEquals(240, testEvent.peopleCouponTotal(total));
+    testEvent.setPrice();
+    testEvent.peopleCouponTotal();
+    assertEquals("240.00", testEvent.getTotal());
   }
 
   @Test
-  public void alcoholCouponTotal_checkForFloat_216() {
+  public void alcoholCouponTotal_checkForFloat_108() {
     Event testEvent = new Event(6, "Steak", "Water", false);
-    int total = testEvent.getPrice();
-    assertEquals("21.6", testEvent.alcoholCouponTotal(total));
+    testEvent.setPrice();
+    testEvent.alcoholCouponTotal();
+    assertEquals("10.80", testEvent.getTotal());
   }
-
-
 }

@@ -28,50 +28,44 @@ public class Event {
     return mBand;
   }
 
-  public float getTotal() {
-    return mTotal;
+  public String getTotal() {
+    return String.format("%.2f", mTotal);
   }
 
-  public int getPrice() {
-    int total = 0;
+  public void setPrice() {
     if(mFood.equals("Chicken")) {
-      total += 12;
+      mTotal += 12;
     } else if (mFood.equals("Steak")) {
-      total += 18;
+      mTotal += 18;
     } else if (mFood.equals("Salmon")) {
-      total += 25;
+      mTotal += 25;
     }
     if(mBeverages.equals("Water")) {
-      total += 0;
+      mTotal += 0;
     } else if (mBeverages.equals("Soda")) {
-      total += 3;
+      mTotal += 3;
     } else if (mBeverages.equals("Alcohol")) {
-      total += 12;
+      mTotal += 12;
     }
-    total = (total * mPeople);
+    mTotal = (mTotal * mPeople);
     if(mBand == true) {
-      total += 250;
+      mTotal += 250;
     }
-    return total;
   }
 
   public boolean checkPeopleCoupon() {
     return mPeople > 150;
   }
 
-  public int peopleCouponTotal(int current) {
+  public void peopleCouponTotal() {
     if (mBand == true) {
-      return (current - 250);
+      mTotal = mTotal - 250;
     } else {
       mBand = true;
-      return current;
     }
   }
 
-  public String alcoholCouponTotal(int current) {
-    float floatValue = (float) current/5;
-    String total = String.format("%.1f", floatValue);
-    return total;
+  public void alcoholCouponTotal() {
+    mTotal = mTotal/10;
   }
-
 }
