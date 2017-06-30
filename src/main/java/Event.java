@@ -62,4 +62,11 @@ public class Event {
       return current;
     }
   }
+
+  public String alcoholCouponTotal(int current) {
+    float floatValue = (float) current/5;
+    String total = String.format("%.1f", floatValue);
+    return total;
+  }
+
 }

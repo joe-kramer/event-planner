@@ -59,5 +59,12 @@ public class EventTest {
     assertEquals(240, testEvent.peopleCouponTotal(total));
   }
 
+  @Test
+  public void alcoholCouponTotal_checkForFloat_216() {
+    Event testEvent = new Event(6, "Steak", "Water", false);
+    int total = testEvent.getPrice();
+    assertEquals("21.6", testEvent.alcoholCouponTotal(total));
+  }
+
 
 }
