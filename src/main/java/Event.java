@@ -1,7 +1,7 @@
 public class Event {
-  private int people;
+  // private int mPeople;
 
-  public Event(int people) {
-    
-  }
+  // public Event(int people) {
+  //   mPeople = people;
+  // }
 }
