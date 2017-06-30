@@ -16,6 +16,6 @@ public class Event {
   }
 
   public String getFood() {
-    return "";
+    return mFood;
   }
 }
