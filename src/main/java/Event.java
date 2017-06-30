@@ -60,6 +60,6 @@ public class Event {
   }
 
   public void alcoholCouponTotal() {
-    mTotal = mTotal/10;
+    mTotal = ((mTotal/10) * 9);
   }
 }
