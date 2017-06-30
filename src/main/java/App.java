@@ -28,5 +28,34 @@ public class App {
     System.out.print("\033[H\033[2J");
     Event userEvent = new Event(people, food, beverages, band);
     userEvent.setPrice();
+    System.out.println("Your current total is: " + userEvent.getTotal());
+    myConsole.readLine();
+    System.out.print("\033[H\033[2J");
+    if(userEvent.getPeople() > 150) {
+      System.out.println("Since you have over 150 people, lets see if you qualify for any of our coupons:");
+      myConsole.readLine();
+      System.out.print("\033[H\033[2J");
+      if(userEvent.getBand()) {
+        userEvent.peopleCouponTotal();
+        System.out.println("Since you have a band, we will knock off the original $250. Your new total is: " + userEvent.getTotal());
+        myConsole.readLine();
+        System.out.print("\033[H\033[2J");
+      }
+      if (userEvent.getBeverage().equals("Alcohol")) {
+        userEvent.alcoholCouponTotal();
+        System.out.println("Since you are purchasing your alcohol through us, we will reduce your price by 10%. Your new total is: " + userEvent.getTotal());
+        myConsole.readLine();
+        System.out.print("\033[H\033[2J");
+      }
+    } else {
+      System.out.println("It appears you do not have enough people to qualify for any of our coupon deals.");
+      myConsole.readLine();
+      System.out.print("\033[H\033[2J");
+    }
+    System.out.println("Your final order consists of: " + userEvent.getFood() + " and " + userEvent.getBeverage() + " for " + user.getPeople() + " people");
+    if (userEvent.getBand()) {
+      System.out.println("And a band!");
+    }
+    System.out.println("Your grand total is... " + userEvent.getTotal());
   }
 }

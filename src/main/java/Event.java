@@ -53,15 +53,9 @@ public class Event {
     }
   }
 
-  public boolean checkPeopleCoupon() {
-    return mPeople > 150;
-  }
-
   public void peopleCouponTotal() {
     if (mBand == true) {
       mTotal = mTotal - 250;
-    } else {
-      mBand = true;
     }
   }
 
