@@ -27,4 +27,11 @@ public class EventTest {
     assertEquals("Beer", testEvent.getBeverage());
   }
 
+  @Test
+  public void newEvent_getsBand_Chicken() {
+    Event testEvent = new Event(10, "Chicken", "Beer", true);
+    assertEquals(true, testEvent.getBand());
+  }
+
+
 }
