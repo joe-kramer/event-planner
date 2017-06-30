@@ -22,7 +22,7 @@ public class EventTest {
   }
 
   @Test
-  public void newEvent_getsFood_Chicken() {
+  public void newEvent_getsBeverage_Chicken() {
     Event testEvent = new Event(10, "Chicken", "Beer", true);
     assertEquals("Beer", testEvent.getBeverage());
   }

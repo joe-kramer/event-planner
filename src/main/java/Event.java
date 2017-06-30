@@ -20,6 +20,6 @@ public class Event {
   }
 
   public String getBeverage() {
-    return "";
+    return mBeverages;
   }
 }
