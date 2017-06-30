@@ -26,4 +26,27 @@ public class Event {
   public boolean getBand() {
     return mBand;
   }
+
+  public int getPrice() {
+    int total = 0;
+    if(mFood.equals("Chicken")) {
+      total += 12;
+    } else if (mFood.equals("Steak")) {
+      total += 18;
+    } else if (mFood.equals("Salmon")) {
+      total += 25;
+    }
+    if(mBeverages.equals("Water")) {
+      total += 0;
+    } else if (mBeverages.equals("Soda")) {
+      total += 3;
+    } else if (mBeverages.equals("Alcohol")) {
+      total += 12;
+    }
+    total = (total * mPeople);
+    if(mBand == true) {
+      total += 250;
+    }
+    return total;
+  }
 }
