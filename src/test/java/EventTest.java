@@ -24,7 +24,7 @@ public class EventTest {
   @Test
   public void newEvent_getsBeverage_Chicken() {
     Event testEvent = new Event(10, "Chicken", "Alcohol", true);
-    assertEquals("Beer", testEvent.getBeverage());
+    assertEquals("Alcohol", testEvent.getBeverage());
   }
 
   @Test
@@ -36,8 +36,6 @@ public class EventTest {
   @Test
   public void getPrice_returnsPrice_100() {
     Event testEvent = new Event(10, "Chicken", "Alcohol", true);
-    assertEquals(true, testEvent.getBand());
+    assertEquals(490, testEvent.getPrice());
   }
-
-
 }
