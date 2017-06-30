@@ -38,4 +38,10 @@ public class EventTest {
     Event testEvent = new Event(10, "Chicken", "Alcohol", true);
     assertEquals(490, testEvent.getPrice());
   }
+
+  @Test
+  public void checkPeopleCoupon_returnIfEnoughPeople_False() {
+    Event testEvent = new Event(10, "Chicken", "Alcohol", true);
+    assertEquals(false, testEvent.checkPeopleCoupon());
+  }
 }

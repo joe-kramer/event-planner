@@ -49,4 +49,8 @@ public class Event {
     }
     return total;
   }
+
+  public boolean checkPeopleCoupon() {
+    return mPeople > 150;
+  }
 }
