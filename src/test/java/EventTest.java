@@ -5,14 +5,20 @@ public class EventTest {
 
   @Test
   public void newEvent_instantiatesCorrectly() {
-    Event testEvent = new Event(10);
+    Event testEvent = new Event(10, "Chicken", "Beer", true);
     assertEquals(true, testEvent instanceof Event);
   }
 
   @Test
   public void newEvent_getsPeople_10() {
-    Event testEvent = new Event(10);
+    Event testEvent = new Event(10, "Chicken", "Beer", true);
     assertEquals(10, testEvent.getPeople());
+  }
+
+  @Test
+  public void newEvent_getsFood_Chicken() {
+    Event testEvent = new Event(10, "Chicken", "Beer", true);
+    assertEquals("Chicken", testEvent.getFood());
   }
 
 }
