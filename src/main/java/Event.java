@@ -3,6 +3,7 @@ public class Event {
   private String mFood;
   private String mBeverages;
   private boolean mBand;
+  private float mTotal;
 
   public Event(int people, String food, String beverages, boolean band) {
     mPeople = people;
@@ -25,6 +26,10 @@ public class Event {
 
   public boolean getBand() {
     return mBand;
+  }
+
+  public float getTotal() {
+    return mTotal;
   }
 
   public int getPrice() {
