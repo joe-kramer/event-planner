@@ -41,12 +41,6 @@ public class EventTest {
   }
 
   @Test
-  public void checkPeopleCoupon_returnIfEnoughPeople_False() {
-    Event testEvent = new Event(10, "Chicken", "Alcohol", true);
-    assertEquals(false, testEvent.checkPeopleCoupon());
-  }
-
-  @Test
   public void peopleCouponTotal_ifBandSelected_240() {
     Event testEvent = new Event(10, "Chicken", "Alcohol", true);
     testEvent.setPrice();
@@ -67,6 +61,6 @@ public class EventTest {
     Event testEvent = new Event(6, "Steak", "Water", false);
     testEvent.setPrice();
     testEvent.alcoholCouponTotal();
-    assertEquals("10.80", testEvent.getTotal());
+    assertEquals("97.20", testEvent.getTotal());
   }
 }
